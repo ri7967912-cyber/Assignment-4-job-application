@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <!-- tailwind + daisyui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        font-family: "Geist", sans-serif;
+    }
+</style>
+</head>
+<body class="bg-gray-50">
+
+    <div class="max-w-6xl mx-auto mt-10 p-8 bg-white ">
+        <h1 class="text-3xl font-bold text-black-900 mb-2">Job Application Tracker</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3   border-gray-200 pt-8 gap-5">
+            <div class="px-6 py-4 border-2 border-gray-100 bg-white rounded-lg">
+                <p class="text-gray-500 font-medium mb-1">Total</p>
+                <h2 id="total-count" class="text-4xl font-bold">8</h2>
+            </div>
+            <div class="px-6 py-4 border-2 border-gray-100 bg-white rounded-lg">
+                <p class="text-gray-500 font-medium mb-1">Interview</p>
+                <h2 id="interview-count" class="text-4xl font-bold text-green-500">0</h2>
+            </div>
+            <div class="px-6 py-4 border-2 border-gray-100 bg-white rounded-lg">
+                <p class="text-gray-500 font-medium mb-1">Rejected</p>
+                <h2 id="rejected-count" class="text-4xl font-bold text-red-500">0</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto mt-12 px-4">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold text-gray-800">Available Jobs</h3>
+            <p id="tab-job-count" class="text-gray-400 font-semibold text-sm">8 jobs</p>
+        </div>
+        
+        <div class="flex gap-3 mb-10">
+            <button onclick="changeTab('All')" id="tab-All" class="btn btn-sm bg-blue-600 text-white border-none px-6 normal-case">All</button>
+            <button onclick="changeTab('Interview')" id="tab-Interview" class="btn btn-sm bg-gray-100 text-gray-500 border-none px-6 normal-case">Interview</button>
+            <button onclick="changeTab('Rejected')" id="tab-Rejected" class="btn btn-sm bg-gray-100 text-gray-500 border-none px-6 normal-case">Rejected</button>
+        </div>
+
+        <div id="jobs-container" class="space-y-6">
+            </div>
+    </div>
+
+    <script src="./functional.js"></script>
+</body>
+</html>
